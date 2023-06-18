@@ -1,10 +1,9 @@
 const app = Vue.createApp({
   data() {
     return {
-      product: "Boots",
-      description: "Description about boots",
+      product: "Socks",
+      image: "./assets/images/socks_green.jpg",
+      url: "https://www.vuemastery.com/",
     };
   },
 });
-
-app.mount("#app");
