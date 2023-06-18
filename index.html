@@ -2,39 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Mastery</title>
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <div id="app">
-      <div class="nav-bar"></div>
-      <div class="product">
-        <div class="product-image">
-          <img :src="image" alt="product_image">
-        </div>
-        <div class="product-info">
-          <h1>{{product}}</h1>
-          <p v-if="inStock">In Stock</p>
-          <p v-else>Out of Stock</p>
-          <ul>
-            <li v-for="(detail, index) in details" :key="index">{{detail}}</li>
-          </ul>
-          <div v-for="variant in variants" :key="variant.variantId">
-            <p @mouseover="updateProduct(variant.variantImage)">{{variant.variantColor}}</p>
-          </div>
-
-          <button @click="addCart">Add to Card</button>
-
-          <div class="cart">
-            <p>Cart {{cart}}</p>
-          </div>
-        </div>
-      </div>
+      <h1>{{product}}</h1>
+      <p>{{description}}</p>
     </div>
-    <!-- Import Js -->
-    <script src="./main.js" defer></script>
+    <!-- Import JS -->
+    <script src="./main.js"></script>
   </body>
 </html>
