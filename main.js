@@ -17,7 +17,7 @@ const app = Vue.createApp({
     };
   },
   methods:{
-    addCart() {
+    addToCart() {
       this.cart++
     }
   },
