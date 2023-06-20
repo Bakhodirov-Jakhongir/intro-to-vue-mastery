@@ -13,15 +13,19 @@ const app = Vue.createApp({
         { id: 1, color: "green", image: "./assets/images/socks_green.jpg" },
         { id: 2, color: "blue", image: "./assets/images/socks_blue.jpg" },
       ],
-      sizes: ["S", "M", "L", "XL"],
     };
   },
   methods: {
     addToCart() {
       this.cart++;
     },
+    removeFromCart() {
+      if (this.cart >= 1) {
+        this.cart--;
+      }
+    },
     updateImage(variantImage) {
       this.image = variantImage;
-    }
+    },
   },
 });
