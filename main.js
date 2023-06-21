@@ -7,7 +7,7 @@ const app = Vue.createApp({
       url: "https://www.vuemastery.com/",
       inStock: false,
       outOfStockImage:'./assets/images/out-of-stock-img.jpg',
-      inventory: 0,
+      inventory: 10,
       onSale: true,
       details: ["50% cotton", "30% wool", "20% polyester"],
       variants: [
