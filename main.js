@@ -6,12 +6,13 @@ const app = Vue.createApp({
       image: "./assets/images/socks_green.jpg",
       url: "https://www.vuemastery.com/",
       inStock: false,
+      outOfStockImage:'./assets/images/out-of-stock-img.jpg',
       inventory: 0,
       onSale: true,
       details: ["50% cotton", "30% wool", "20% polyester"],
       variants: [
         { id: 1, color: "green", image: "./assets/images/socks_green.jpg" },
-        { id: 2, color: "#39495", image: "./assets/images/socks_blue.jpg" },
+        { id: 2, color: "blue", image: "./assets/images/socks_blue.jpg" },
       ],
     };
   },
