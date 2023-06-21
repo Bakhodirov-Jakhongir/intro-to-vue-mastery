@@ -11,7 +11,7 @@ const app = Vue.createApp({
       details: ["50% cotton", "30% wool", "20% polyester"],
       variants: [
         { id: 1, color: "green", image: "./assets/images/socks_green.jpg" },
-        { id: 2, color: "blue", image: "./assets/images/socks_blue.jpg" },
+        { id: 2, color: "#39495", image: "./assets/images/socks_blue.jpg" },
       ],
     };
   },
