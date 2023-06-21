@@ -34,11 +34,19 @@
               :key="variant.id"
               @mouseover="updateImage(variant.image)"
               class="color-circle"
-              :style="{backgroundColor:variant.color}"
+              :style="{'background-color': variant.color}"
+              :class="[!inStock ? updateImage(outOfStockImage) : variant.color]"
             >
               <!-- {{variant.color}} -->
             </div>
-            <button class="button" @click="addToCart">Add to Cart</button>
+            <button
+              class="button"
+              @click="addToCart"
+              :disabled="!inStock"
+              :class="{disabledButton:!inStock}"
+            >
+              Add to Cart
+            </button>
             <button class="button" @click="removeFromCart">
               Remove from Cart
             </button>
