@@ -19,9 +19,7 @@ app.component("product-display", {
             <p v-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
             <p v-else>Out of Stock</p>
             <p>{{sale}}</p>
-            <ul>
-              <li v-for="detail in details">{{detail}}</li>
-            </ul>
+            <product-details :details="details"></product-details>
             <ul>
               <li v-for="(size,index) in sizes" :key="index">{{size}}</li>
             </ul>
