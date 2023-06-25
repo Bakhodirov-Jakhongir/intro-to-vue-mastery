@@ -77,7 +77,7 @@ app.component("product-display", {
       this.$emit("add-to-cart", this.variants[this.selectedVariant].id);
     },
     removeFromCart() {
-      this.$emit("remove-from-cart");
+      this.$emit("remove-from-cart",this.variants[this.selectedVariant].id);
     },
     updateProductVariant(index) {
       this.selectedVariant = index;
