@@ -46,6 +46,8 @@ app.component("product-display", {
             <a :href="url">Made by Vue Mastery</a>
           </div>
         </div>
+        <review-list v-if="reviews.length" :reviews="reviews"></review-list>
+        <review-form @review-submitted="createReview"></review-form>
     </div>`,
   data() {
     return {
@@ -70,6 +72,7 @@ app.component("product-display", {
           quantity: 1,
         },
       ],
+      reviews: [],
     };
   },
   methods: {
@@ -77,11 +80,16 @@ app.component("product-display", {
       this.$emit("add-to-cart", this.variants[this.selectedVariant].id);
     },
     removeFromCart() {
-      this.$emit("remove-from-cart",this.variants[this.selectedVariant].id);
+      this.$emit("remove-from-cart", this.variants[this.selectedVariant].id);
     },
     updateProductVariant(index) {
       this.selectedVariant = index;
       console.log(index);
+    },
+    createReview(review) {
+      console.log('review',review);
+      this.reviews.push(review);
+      console.log(this.reviews);
     },
   },
   computed: {
